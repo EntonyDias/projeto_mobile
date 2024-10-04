@@ -5,6 +5,8 @@ import HelloWorld from '../components/HelloWorld';
 import { styles } from '../styles/styles';
 import Exemplo1 from '../components/Exemplo1';
 
+//componente chamado TelaPrincipal que recebe PrincipalProps como parametro
+//e constroi uma view com o componente HelloWorld e Exemplo1 dentro
 const TelaPrincipal = (props: PrincipalProps) => {
     return (
         <View 
@@ -15,4 +17,5 @@ const TelaPrincipal = (props: PrincipalProps) => {
     );
 }
 
+//exportand o componente TelaPrincipa para ficar vi
 export default TelaPrincipal;

@@ -1,0 +1,1 @@
+iew style = ({flex: 0.3, flexDirection:'row'})
