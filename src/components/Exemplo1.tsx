@@ -32,7 +32,7 @@ const Exemplo1 = () => {
 
       {/*Pressable é um botão*/}
       <Pressable>
-        <text style={styles.titulo2}>Isso é um botão</text>
+        <Text style={styles.titulo2}>Isso é um botão</Text>
       </Pressable>
 
     </ScrollView>
