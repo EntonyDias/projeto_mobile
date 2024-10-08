@@ -10,15 +10,16 @@ import ExemploStylesView from '../components/ExemploStyleView';
 //componente chamado TelaPrincipal que recebe PrincipalProps como parametro
 //e constroi uma view com o componente HelloWorld e Exemplo1 dentro
 const TelaPrincipal = (props: PrincipalProps) => {
-    return (
-        <View 
-            style={styles.tela}>
-            <HelloWorld/>
-            <Exemplo1/>
-            {/* <ExemploStylesView/> */}
-        </View>
-    );
+	return (
+		<View
+			style={styles.tela}>
+			<HelloWorld />
+			<Exemplo1 />
+			{/* <ExemploStylesView/> */}
+		</View>
+	);
 }
+{ [] }
 
 //exportand o componente TelaPrincipa para ficar vi
 export default TelaPrincipal;
