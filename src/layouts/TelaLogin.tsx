@@ -27,7 +27,7 @@ const TelaLogin = () => {
             <TextInput
                style={[styles.caixa_texto, styles.largura_70]}
                defaultValue=""
-            />
+               secureTextEntry={true}/>
 
             <Text style={styles.titulo2}>Digite a Senha</Text>
             <TextInput
@@ -35,7 +35,7 @@ const TelaLogin = () => {
                defaultValue=""
             />
 
-            <Pressable style={[styles.botao2]}>
+            <Pressable style={(state) => [styles.botao2, state.pressed ? {opacity: 0.5} : null ]}>
                <Text style={[styles.texto_botao]}>Entrar</Text>
             </Pressable>
 
