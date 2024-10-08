@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
    },
    texto_botao: {
       fontSize: 25,
-      color: '#000000'
+      color: 'black'
    },
 
    caixa_texto: {
