@@ -8,12 +8,12 @@ const styles = StyleSheet.create({
     titulo1: {
         fontSize: 40,
         fontWeight: 'bold',
-        color: 'black'
+        color: 'purple'
     },
     titulo2: {
         fontSize: 30,
         fontWeight: 'bold',
-        color: 'black'
+        color: '#663399'
     },
     botao: {
         justifyContent: 'center',
@@ -43,6 +43,9 @@ const styles = StyleSheet.create({
     imagem_200: {
         width: 200,
         height: 200
+    },
+    centralizar:{
+        
     }
 });
 

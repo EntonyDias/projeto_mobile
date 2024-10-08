@@ -4,7 +4,7 @@ import TelaLogin from "../layouts/TelaLogin";
 
 type RootStackParamList = {
     TelaPrincipal: undefined;
-    
+    TelaLogin:undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -13,17 +13,17 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const HomeNavigator = () => {
     return (
         <Stack.Navigator 
-            initialRouteName="TelaPrincipal" //nome da tela inicial
+            initialRouteName="TelaLogin" //nome da tela inicial
             screenOptions={{headerShown: false}} //headerShown define se o cabeçalho aparece ou não
-            ><Stack.Screen name="TelaPrincipal" component={TelaPrincipal} />
+            ><Stack.Screen name="TelaLogin" component={TelaLogin} />
         </Stack.Navigator>
     );
 }
 
-//cria as propriedades da TelaPrincipal, que nesse caso é undefined
-//essas propriedades são usadasd lá em layouts/TelaPrincipal.tsx
+//cria as propriedades da Tela, que nesse caso é undefined
+//essas propriedades são usadas lá em layouts/TelaPrincipal.tsx
 type PrincipalProps = NativeStackScreenProps<RootStackParamList, 
-    'TelaPrincipal'>;    
+    'TelaLogin'>;    
 
 export default HomeNavigator;
 export type {
