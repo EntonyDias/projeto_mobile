@@ -4,8 +4,6 @@ import { margem } from "../styles/margins";
 import { borda } from "../styles/bordas.ts";
 
 const TelaLogin = () => {
-   //variável
-   let imagem = 'https://i.pinimg.com/236x/25/f2/90/25f290e34bf84f62e7e4966530ec97b4.jpg';
 
    //O retorno da função é o que será construído em tela
    return (
@@ -14,7 +12,7 @@ const TelaLogin = () => {
          <View style={[styles.centralizar, margem.margem_bot88]}>
             <Text style={styles.titulo1}>Tela Login</Text>
             <Image
-               source={require('../images/goth.png')}
+               source={require('../images/lulu.png')}
                style={[styles.imagem_200, borda.borda_perfil]}
             />
          </View>
