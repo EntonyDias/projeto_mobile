@@ -5,8 +5,9 @@ import { styles } from '../styles/styles';
 type CalculoProps = {
    valor1: number;
    valor2: number;
-   valor3: number;
 }
+
+
 
 const ExemploCalculo = (props: CalculoProps) => {
    
@@ -22,15 +23,17 @@ const ExemploCalculo = (props: CalculoProps) => {
       return props.valor2 - props.valor1;
    }
 
-   if (props.valor2 != 0) {
+   
    function dividir1 (){
+   if (props.valor2 != 0) {
       return props.valor1 / props.valor2;
    } return 0}
 
+   
+   function dividir2 (){
    if (props.valor1 != 0) {
-      function dividir2 (){
-         return props.valor2 / props.valor1;
-      } return 0}
+      return props.valor2 / props.valor1;
+   } return 0}
 
    function multiplicar (){
       return props.valor1 * props.valor2;
@@ -38,7 +41,12 @@ const ExemploCalculo = (props: CalculoProps) => {
 
    return (
       <>
-      <Text style={styles.titulo2}>somar()</Text>
+      <Text style={styles.titulo2}> Soma: {somar()}</Text>
+      <Text style={styles.titulo2}> Subtração 1: {subtrair1()}</Text>
+      <Text style={styles.titulo2}> Subtração 2: {subtrair2()}</Text>
+      <Text style={styles.titulo2}> Divisão 1: {dividir1()}</Text>
+      <Text style={styles.titulo2}> Divisão 2: {dividir2()}</Text>
+      <Text style={styles.titulo2}> Multiplicação: {multiplicar()}</Text>
       </>
    );
 

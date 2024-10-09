@@ -14,7 +14,7 @@ const HomeNavigator = () => {
     return (
         <Stack.Navigator 
             initialRouteName="TelaLogin" //nome da tela inicial
-            screenOptions={{headerShown: true}} //headerShown define se o cabeçalho aparece ou não
+            screenOptions={{headerShown: false}} //headerShown define se o cabeçalho aparece ou não
             ><Stack.Screen name="TelaLogin" component={TelaLogin} />
             
         </Stack.Navigator>
