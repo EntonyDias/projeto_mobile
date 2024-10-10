@@ -5,8 +5,22 @@ import { margem } from "../styles/margins";
 import { borda } from "../styles/bordas.ts";
 import ExemploCalculo from "../components/ExemploCalculo.tsx";
 import AlunoAprovado from "../components/Aprovado.tsx"
+import ListaSimples from "../components/ListaSimples.tsx"
+import { Animal } from "../types/Animal.ts";
+import ListaAnimais from "../components/ListaAnimais.tsx";
+import ListaProdutos from "../components/ListaProdutos.tsx";
+import { Produto } from "../types/Produto.ts";
 
 const TelaLogin = () => {
+
+   {/*let listaPessoas = ['entony', 'pedro'] as string[];
+   let animal1 = {nome: 'lily', especie: 'neko'} as Animal; 
+   let animal2 = {nome: 'purple', especie: 'imp'} as Animal;
+   let listaAnimais = [animal1, animal2] as Animal[];*/}
+   let produto1 = {nome: 'lily', codigo:88888888, preco: 88.88}
+   let produto2 = {nome: 'purple', codigo:333, preco: 33.33}
+
+   let listaProdutos = [produto1, produto2] as Produto[];
 
    //O retorno da função é o que será construído em tela
    return (
@@ -41,6 +55,16 @@ const TelaLogin = () => {
             </Pressable>
 
          </View>
+
+      <View 
+      style={styles.tela}>
+   
+      <ListaProdutos listaProdutos={listaProdutos}/>
+      {/*<ListaAnimais listaAnimais={listaAnimais}/>            */}
+      {/*   <ListaSimples listaPessoas={listaPessoas}/>         */}
+         
+      </View>
+
 
       {/*  <AlunoAprovado nome='entony' nota1={7} nota2={2}/>   */}
       {/*   <ExemploCalculo valor1={1} valor2={2} />            */}

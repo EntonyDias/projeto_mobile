@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { styles } from '../styles/styles';
+import { estilo } from '../styles/estilos';
 
 type CalculoProps = {
    valor1: number;
@@ -41,12 +42,12 @@ const ExemploCalculo = (props: CalculoProps) => {
 
    return (
       <>
-      <Text style={styles.titulo2}> Soma: {somar()}</Text>
-      <Text style={styles.titulo2}> Subtração 1: {subtrair1()}</Text>
-      <Text style={styles.titulo2}> Subtração 2: {subtrair2()}</Text>
-      <Text style={styles.titulo2}> Divisão 1: {dividir1()}</Text>
-      <Text style={styles.titulo2}> Divisão 2: {dividir2()}</Text>
-      <Text style={styles.titulo2}> Multiplicação: {multiplicar()}</Text>
+      <Text style={estilo.titulo30}> Soma: {somar()}</Text>
+      <Text style={estilo.titulo30}> Subtração 1: {subtrair1()}</Text>
+      <Text style={estilo.titulo30}> Subtração 2: {subtrair2()}</Text>
+      <Text style={estilo.titulo30}> Divisão 1: {dividir1()}</Text>
+      <Text style={estilo.titulo30}> Divisão 2: {dividir2()}</Text>
+      <Text style={estilo.titulo30}> Multiplicação: {multiplicar()}</Text>
       </>
    );
 

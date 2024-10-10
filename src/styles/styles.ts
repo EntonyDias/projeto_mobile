@@ -2,18 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
    tela: {
-      flex: 1,
-      backgroundColor: '#E2B8FA'
-   },
-   titulo1: {
-      fontSize: 40,
-      fontWeight: 'bold',
-      color: '#B300FF'
-   },
-   titulo2: {
-      fontSize: 30,
-      fontWeight: 'heavy',
-      color: '#B300FF'
+      backgroundColor: '#330033'
    },
    botao: {
       justifyContent: 'center',

@@ -21,5 +21,5 @@ const TelaPrincipal = (props: PrincipalProps) => {
 }
 { [] }
 
-//exportand o componente TelaPrincipa para ficar vi
+//exportando o componente TelaPrincipal para ficar visivel	
 export default TelaPrincipal;

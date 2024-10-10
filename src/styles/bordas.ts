@@ -4,7 +4,7 @@ const borda = StyleSheet.create({
    borda_perfil: {
       borderWidth: 8,
       borderRadius: 18,
-      borderColor: 'black'
+      borderColor: '#cc66cc'
    }
 });
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { styles } from '../styles/styles';
+import { estilo } from '../styles/estilos';
 
 type AprovadoProps = {
    nome: string;
@@ -22,7 +23,7 @@ const AlunoAprovado = (props: AprovadoProps) => {
 
    return (
       <>
-      <Text style={styles.titulo2}>
+      <Text style={estilo.titulo30}>
          Aluno: {props.nome} {aprovadoAluno()}
       </Text>
       </>
