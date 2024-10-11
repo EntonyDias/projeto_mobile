@@ -37,6 +37,9 @@ const estilo = StyleSheet.create({
       borderColor: '#FFCCFF'
    },
 
+   click:{
+      opacity: 50
+   }
 });
 
 export { estilo }

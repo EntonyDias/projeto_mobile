@@ -25,7 +25,7 @@ const ListaProdutos = (props: ListaProdutosProps) => {
                   {'Codigo: ' + info.item.codigo}
                </Text>
                <Text>
-                  {'Preço: ' + info.item.preco}
+                  {'Preço: ' + info.item.preco.toFixed(2)}
                </Text>
                </View>
             )

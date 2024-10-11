@@ -4,14 +4,6 @@ const styles = StyleSheet.create({
    tela: {
       backgroundColor: '#330033'
    },
-   botao: {
-      justifyContent: 'center',
-      backgroundColor: 'green',
-      paddingVertical: 10,
-      paddingHorizontal: 30,
-      marginTop: 20,
-      borderRadius: 10
-   },
 
    largura_70: {
       width: '70%'
