@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Image, ScrollView, TextInput, Pressable } from 'react-native';
 import { styles } from '../styles/styles';
+import { estilo } from '../styles/estilos';
 
 const Exemplo1 = () => {
   //variável
@@ -11,7 +12,7 @@ const Exemplo1 = () => {
     //Painel que desliza (com scroll)
     <ScrollView>
       {/*texto ou label*/}
-      <Text style={styles.titulo1}>Exemplo 1 com style</Text>
+      <Text style={estilo.titulo30}>Exemplo 1 com style</Text>
 
       {/*painel*/}
       <View>
@@ -26,13 +27,13 @@ const Exemplo1 = () => {
 
       {/*caixa de texto*/}
       <TextInput
-        style={[styles.caixa_texto, styles.largura_70]}
+        style={[estilo.caixa_texto1, styles.largura_70]}
         defaultValue="Digite aqui"
       />
 
       {/*Pressable é um botão*/}
       <Pressable>
-        <Text style={styles.titulo2}>Isso é um botão</Text>
+        <Text style={estilo.titulo40}>Isso é um botão</Text>
       </Pressable>
 
     </ScrollView>

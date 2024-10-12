@@ -16,8 +16,13 @@ import CampoTexto from "../componentes/CampoTexto.tsx";
 import React from "react";
 import CampoSenha from "../componentes/CampoSenha.tsx";
 import ParteLogin from "../componentes/ParteLogin.tsx";
+import { LoginProps } from "../navigation/HomeNavigator.tsx";
+import TelaCadastro from "./TelaCadastro.tsx";
 
-const TelaLogin = () => {
+const TelaLogin = (props: LoginProps) => {
+
+   function goTelaCadastro(){
+      props.navigation.navigate('TelaCadastro')}
 
    {/*
    let listaPessoas = ['entony', 'pedro'] as string[];
@@ -41,32 +46,38 @@ const TelaLogin = () => {
             />
          </View>
 
-         <View style={[styles.centralizar, styles.tela, margem.margem_bot88]}>
+         <View style={[styles.centralizar, styles.tela]}>
             <ParteLogin />
          </View>
 
-         <View style={styles.tela}>
-
-            <ExemploState />
+         {/* <View style={styles.tela}>*/}
+            {/*    <ExemploState />                                   */}
             {/*    <ExemploEvento/>                                   */}
             {/*    <ListaProdutos listaProdutos={listaProdutos}/>     */}
             {/*    <ListaAnimais listaAnimais={listaAnimais}/>        */}
             {/*    <ListaSimples listaPessoas={listaPessoas}/>        */}
-
-         </View>
-
+         {/*</View> */}
 
          {/*  <AlunoAprovado nome='entony' nota1={7} nota2={2}/>   */}
          {/*   <ExemploCalculo valor1={1} valor2={2} />            */}
 
          <View style={[styles.centralizar, styles.tela, styles.flexivel_central]}>
-            <Pressable style={[estilo.botao1]}>
+            <Pressable style={[estilo.botao1]}
+            onPress={()=> {goTelaCadastro()}}>
                <Text style={[estilo.texto_botao1]}>Cadastrar-se</Text>
             </Pressable>
 
             <Pressable style={[estilo.botao1]}>
                <Text style={[estilo.texto_botao1]}>Esqueceu sua senha</Text>
             </Pressable>
+   
+         </View>
+
+         <View>
+         <Pressable style={[estilo.botao1]}
+			onPress={() => {props.navigation.goBack()}}>
+				<Text style={[estilo.texto_botao1]}>Voltar</Text>
+			</Pressable>
          </View>
 
       </ScrollView>

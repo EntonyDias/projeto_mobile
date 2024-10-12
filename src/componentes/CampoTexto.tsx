@@ -11,13 +11,11 @@ const CampoTexto = (props: TextoProps) => {
 
    return (
       <>
-         <Text style={[estilo.titulo30]}>
-            Digite o Login</Text>
          <TextInput
             style={[estilo.caixa_texto1, styles.largura_70]}
             defaultValue=""
             onChangeText={(text) => {
-               props.mudartexto(text);
+               props.mudarTexto(text);
             }}
          />
       </>
