@@ -10,7 +10,7 @@ const ExemploState = () => {
    const[sobrenome, setSobrenome] = useState('');
 
    //Não funciona para guardar o texto do campo
-   let fraseVariavel = '' as String;
+   // let fraseVariavel = '' as String;
 
    function exibirMensagem() {
       Alert.alert(
@@ -35,6 +35,32 @@ const ExemploState = () => {
             onPress={() => {exibirMensagem()}} >
             <Text style={estilo.texto_botao1}>Adentrar</Text>
          </Pressable>
+
+         {
+            //Se o texto tiver mais de 8 caracteres, irá contruir o Text
+            nome.length >= 8 && 
+            <Text style={estilo.titulo30}> Isso é verdade </Text>
+         }
+         {
+            //Se o texto tiver mais de 8 caracteres, irá contruir o Text
+            //Senão, irá construir a outra condição
+            nome.length >= 8 ?
+            <Text style={estilo.titulo30}> Isso é verdade </Text>
+            :
+            <Text style={estilo.titulo30}> Isso é falso </Text>
+         }
+          {
+            //Se o texto tiver mais de 8 caracteres, irá contruir o Text
+            //Senão, irá construir a outra condição
+            //Corrente de If e Else, mó top 
+            nome.length >= 8 ?
+            <Text style={estilo.titulo30}> Isso é verdade </Text>
+            :( nome.length <= 8 ?
+            <Text style={estilo.titulo30}> Isso é falso </Text>
+            :<Text style={estilo.titulo30}> Isso esta vazio </Text>
+            )
+         
+         }
 
       </View>
    )

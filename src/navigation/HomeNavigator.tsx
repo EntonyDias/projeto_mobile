@@ -4,13 +4,15 @@ import TelaLogin from "../layouts/TelaLogin";
 import React from 'react';
 import TelaCadastro from "../layouts/TelaCadastro";
 import TelaAmaldicoada from "../layouts/TelaAmaldicoada";
+import TelaInicial from "../layouts/TelaInicial";
 
 //Define quais as telas e os parâmetros de cada tela
 type RootStackParamList = {
-    TelaPrincipal: undefined;
+    TelaPrincipal: {valor: number};
     TelaLogin: undefined;
     TelaCadastro: undefined;
     TelaAmaldicoada: undefined;
+    TelaInicial: undefined;
 };
 
 //Cria a Stack (tipo de navegação onde as telas estão em uma "pilha")
@@ -29,6 +31,7 @@ const HomeNavigator = () => {
             <Stack.Screen name="TelaLogin" component={TelaLogin} />
             <Stack.Screen name="TelaCadastro" component={TelaCadastro} />
             <Stack.Screen name="TelaAmaldicoada" component={TelaAmaldicoada} />
+            <Stack.Screen name="TelaInicial" component={TelaInicial} />
         </Stack.Navigator>
     );
 }
@@ -39,9 +42,10 @@ type PrincipalProps = NativeStackScreenProps<RootStackParamList, 'TelaPrincipal'
 type LoginProps = NativeStackScreenProps<RootStackParamList, 'TelaLogin'>;
 type CadatroProps = NativeStackScreenProps<RootStackParamList, 'TelaCadastro'>;
 type AmaldicoadaProps = NativeStackScreenProps<RootStackParamList, 'TelaAmaldicoada'>;
+type InicialProps = NativeStackScreenProps<RootStackParamList, 'TelaInicial'>;
 
 // exporta o navegador da pilha para ficar visivel para outros arquivos
 export default HomeNavigator;
 
 // exporta as telas para ficar visiveis para outros arquivos
-export type { PrincipalProps, LoginProps, CadatroProps,  AmaldicoadaProps};
+                        export type { PrincipalProps, LoginProps, CadatroProps,  AmaldicoadaProps, InicialProps};

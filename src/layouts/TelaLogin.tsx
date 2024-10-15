@@ -47,7 +47,7 @@ const TelaLogin = (props: LoginProps) => {
          </View>
 
          <View style={[styles.centralizar, styles.tela]}>
-            <ParteLogin />
+            <ParteLogin navigation={props.navigation} route={props.route}/>
          </View>
 
          {/* <View style={styles.tela}>*/}

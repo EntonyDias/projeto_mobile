@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import CampoSenha from "../componentes/CampoSenha.tsx";
 import { Alert, Pressable, Text } from "react-native";
 import { estilo } from "../styles/estilos.ts";
+import Props, { LoginProps, PrincipalProps } from "../navigation/HomeNavigator.tsx";
 
-const ParteLogin = () => {
 
+const ParteLogin = (props: LoginProps) => {
+   const s = 1;
    const [texto, setTexto] = useState('');
    const [senha, setSenha] = useState('');
 
@@ -15,6 +17,11 @@ const ParteLogin = () => {
    function pegarSenha(senha: string) {
       setSenha(senha)
    }
+   function mensagem(){
+      Alert.alert('Infos','Login: ' + texto + '\nSenha: ' + senha)
+      props.navigation.navigate('TelaPrincipal', {valor: s})
+   }
+
 
    return (
       <>
@@ -24,7 +31,8 @@ const ParteLogin = () => {
          <CampoSenha mudarSenha={pegarSenha} />
 
          <Pressable style={(state) => [estilo.botao1, state.pressed ? { opacity: 0.5 } : null]}
-            onPress={() => Alert.alert('Infos','Login: ' + texto + '\nSenha: ' + senha)}
+            onPress={() => mensagem()
+            }
          >
             <Text style={[estilo.texto_botao1]}>Entrar</Text>
          </Pressable>

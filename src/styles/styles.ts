@@ -22,7 +22,13 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'center',
       gap: 38
+   },
+   flexivel_baixo: {
+      flexDirection: 'column-reverse',
+      justifyContent: 'flex-end',
+      gap: 38
    }
+
 
 });
 
