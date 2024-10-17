@@ -5,13 +5,15 @@ import React from 'react';
 import TelaCadastro from "../layouts/TelaCadastro";
 import TelaAmaldicoada from "../layouts/TelaAmaldicoada";
 import TelaInicial from "../layouts/TelaInicial";
+import TelaMaldita from "../layouts/TelaMaldita";
 
 //Define quais as telas e os parâmetros de cada tela
 type RootStackParamList = {
-    TelaPrincipal: {valor: number};
+    TelaPrincipal: undefined;
     TelaLogin: undefined;
     TelaCadastro: undefined;
     TelaAmaldicoada: undefined;
+    TelaMaldita: {valor: number};
     TelaInicial: undefined;
 };
 
@@ -23,7 +25,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const HomeNavigator = () => {
     return (
         <Stack.Navigator
-            initialRouteName="TelaPrincipal" //nome da tela inicial (primeira tela quando entra no aplicativo)
+            initialRouteName="TelaInicial" //nome da tela inicial (primeira tela quando entra no aplicativo)
             screenOptions={{ headerShown: false }} //headerShown define se o cabeçalho aparece ou não
         >
             {/* define uma tela dando um nome(igual ao RootStackParamList) e qual o componente será carregado */}
@@ -32,6 +34,7 @@ const HomeNavigator = () => {
             <Stack.Screen name="TelaCadastro" component={TelaCadastro} />
             <Stack.Screen name="TelaAmaldicoada" component={TelaAmaldicoada} />
             <Stack.Screen name="TelaInicial" component={TelaInicial} />
+            <Stack.Screen name="TelaMaldita" component={TelaMaldita} />
         </Stack.Navigator>
     );
 }
@@ -42,10 +45,11 @@ type PrincipalProps = NativeStackScreenProps<RootStackParamList, 'TelaPrincipal'
 type LoginProps = NativeStackScreenProps<RootStackParamList, 'TelaLogin'>;
 type CadatroProps = NativeStackScreenProps<RootStackParamList, 'TelaCadastro'>;
 type AmaldicoadaProps = NativeStackScreenProps<RootStackParamList, 'TelaAmaldicoada'>;
+type MalditaProps = NativeStackScreenProps<RootStackParamList, 'TelaMaldita'>;
 type InicialProps = NativeStackScreenProps<RootStackParamList, 'TelaInicial'>;
 
 // exporta o navegador da pilha para ficar visivel para outros arquivos
 export default HomeNavigator;
 
 // exporta as telas para ficar visiveis para outros arquivos
-                        export type { PrincipalProps, LoginProps, CadatroProps,  AmaldicoadaProps, InicialProps};
+                        export type { PrincipalProps, LoginProps, CadatroProps,  AmaldicoadaProps, InicialProps, MalditaProps};

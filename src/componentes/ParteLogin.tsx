@@ -7,7 +7,7 @@ import Props, { LoginProps, PrincipalProps } from "../navigation/HomeNavigator.t
 
 
 const ParteLogin = (props: LoginProps) => {
-   const s = 1;
+   
    const [texto, setTexto] = useState('');
    const [senha, setSenha] = useState('');
 
@@ -19,10 +19,8 @@ const ParteLogin = (props: LoginProps) => {
    }
    function mensagem(){
       Alert.alert('Infos','Login: ' + texto + '\nSenha: ' + senha)
-      props.navigation.navigate('TelaPrincipal', {valor: s})
+      props.navigation.navigate('TelaPrincipal')
    }
-
-
    return (
       <>
       <Text style={[estilo.titulo30]}>Digite o Login</Text>

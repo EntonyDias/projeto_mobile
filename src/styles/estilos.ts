@@ -21,7 +21,22 @@ const estilo = StyleSheet.create({
       marginBottom: 18,
       borderRadius: 22,
       borderTopEndRadius: 3,
-      borderBottomStartRadius: 3
+      borderBottomStartRadius: 3,
+      margin: 18 
+   },
+   botao2: {
+      justifyContent: 'center',
+      backgroundColor: '#892EB4',
+      paddingVertical: 8,
+      paddingHorizontal: 8,
+      marginTop: 18,
+      marginBottom: 18,
+      borderRadius: 22,
+      borderTopEndRadius: 3,
+      borderBottomStartRadius: 3,
+      margin: 18,
+      opacity: 0.8,
+
    },
    texto_botao1: {
       fontSize: 25,
@@ -38,8 +53,8 @@ const estilo = StyleSheet.create({
    },
 
    click:{
-      opacity: 50
-   }
+      opacity: 0.5   
+   },
 });
 
 export { estilo }

@@ -1,38 +1,16 @@
-import { Image, Pressable, ScrollView, Text, TextInput, View } from "react-native";
+import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import { styles } from "../styles/styles";
 import { estilo } from "../styles/estilos.ts";
 import { margem } from "../styles/margins";
 import { borda } from "../styles/bordas.ts";
-import ExemploCalculo from "../components/ExemploCalculo.tsx";
-import AlunoAprovado from "../components/Aprovado.tsx"
-import ListaSimples from "../components/ListaSimples.tsx"
-import { Animal } from "../types/Animal.ts";
-import ListaAnimais from "../components/ListaAnimais.tsx";
-import ListaProdutos from "../components/ListaProdutos.tsx";
-import { Produto } from "../types/Produto.ts";
-import ExemploEvento from "../components/ExemploEvento.tsx";
-import ExemploState from "../components/ExemploState.tsx";
-import CampoTexto from "../componentes/CampoTexto.tsx";
 import React from "react";
-import CampoSenha from "../componentes/CampoSenha.tsx";
 import ParteLogin from "../componentes/ParteLogin.tsx";
 import { LoginProps } from "../navigation/HomeNavigator.tsx";
-import TelaCadastro from "./TelaCadastro.tsx";
 
 const TelaLogin = (props: LoginProps) => {
 
    function goTelaCadastro(){
       props.navigation.navigate('TelaCadastro')}
-
-   {/*
-   let listaPessoas = ['entony', 'pedro'] as string[];
-      let animal1 = {nome: 'lily', especie: 'neko'} as Animal; 
-      let animal2 = {nome: 'purple', especie: 'imp'} as Animal;
-      let listaAnimais = [animal 1, animal2] as Animal[];
-      let produto1 = {nome: 'lily', codigo:88888888, preco: 88.88}
-      let produto2 = {nome: 'purple', codigo:333, preco: 33.33}
-      let listaProdutos = [produto1, produto2] as Produto[];
-   */}
 
    //O retorno da função é o que será construído em tela
    return (
@@ -50,31 +28,22 @@ const TelaLogin = (props: LoginProps) => {
             <ParteLogin navigation={props.navigation} route={props.route}/>
          </View>
 
-         {/* <View style={styles.tela}>*/}
-            {/*    <ExemploState />                                   */}
-            {/*    <ExemploEvento/>                                   */}
-            {/*    <ListaProdutos listaProdutos={listaProdutos}/>     */}
-            {/*    <ListaAnimais listaAnimais={listaAnimais}/>        */}
-            {/*    <ListaSimples listaPessoas={listaPessoas}/>        */}
-         {/*</View> */}
-
-         {/*  <AlunoAprovado nome='entony' nota1={7} nota2={2}/>   */}
-         {/*   <ExemploCalculo valor1={1} valor2={2} />            */}
-
          <View style={[styles.centralizar, styles.tela, styles.flexivel_central]}>
-            <Pressable style={[estilo.botao1]}
+            <Pressable style={(state) => [estilo.botao1, state.pressed &&  estilo.click]}
             onPress={()=> {goTelaCadastro()}}>
                <Text style={[estilo.texto_botao1]}>Cadastrar-se</Text>
             </Pressable>
 
-            <Pressable style={[estilo.botao1]}>
+            <Pressable style={(state) => [estilo.botao1, state.pressed &&  estilo.click]}
+               onPress={() => {}}
+            >
                <Text style={[estilo.texto_botao1]}>Esqueceu sua senha</Text>
             </Pressable>
    
          </View>
 
          <View>
-         <Pressable style={[estilo.botao1]}
+         <Pressable style={(state) => [estilo.botao1, state.pressed &&  estilo.click]}
 			onPress={() => {props.navigation.goBack()}}>
 				<Text style={[estilo.texto_botao1]}>Voltar</Text>
 			</Pressable>

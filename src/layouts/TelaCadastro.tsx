@@ -5,7 +5,7 @@ import CampoTexto from "../componentes/CampoTexto";
 import { estilo } from "../styles/estilos";
 import { styles } from "../styles/styles";
 import { CadatroProps } from "../navigation/HomeNavigator";
-
+import auth from "@react-native-firebase/auth";
 
 const TelaCadastro = (props: CadatroProps) => {
 
@@ -19,6 +19,11 @@ const TelaCadastro = (props: CadatroProps) => {
    function pegarSenha(senha: string) {
       setSenha(senha);
    };
+   function cadastrar(){
+      auth().createUserWithEmailAndPassword(email, senha).then(() => 
+         {Alert.alert("conta", "Cadastrado com sucesso")
+            props.navigation.goBack();})
+   }
 
    return (
       <ScrollView style={[styles.tela]}>
@@ -39,16 +44,18 @@ const TelaCadastro = (props: CadatroProps) => {
             />
          </View>
          <View style={[styles.centralizar, styles.tela, styles.flexivel_central]}>
-            <Pressable style={[estilo.botao1]}
+            <Pressable style={(state) => [estilo.botao1, state.pressed &&  estilo.click]}
             onPress={() => {if (senha == senhaConf){
+               cadastrar()
                Alert.alert('Cadastro efetuado com sucesso!!','Email: '+ email +'\nSenha: ' + senha)
             } else {Alert.alert('Cadastro não foi possivel efetuar', 'Motivo: confirmação de senha incorreta')}
             }}
             >
-               <Text style={[estilo.texto_botao1]}>Salvar</Text>
+               <Text style={[estilo.texto_botao1]}>Cadastrar</Text>
+               
             </Pressable>
 
-            <Pressable style={[estilo.botao1]}
+            <Pressable style={(state) => [estilo.botao1, state.pressed &&  estilo.click]}
                onPress={() => { props.navigation.goBack() }}>
                <Text style={[estilo.texto_botao1]}>Cancelar</Text>
             </Pressable>

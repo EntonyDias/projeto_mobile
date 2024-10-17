@@ -7,7 +7,7 @@ const ExemploState = () => {
 
    //Funciona para guardar o texto do campo
    const [nome, setNome] = useState ('bom dia');
-   const[sobrenome, setSobrenome] = useState('');
+   const [sobrenome, setSobrenome] = useState('');
 
    //Não funciona para guardar o texto do campo
    // let fraseVariavel = '' as String;
