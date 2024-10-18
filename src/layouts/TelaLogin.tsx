@@ -1,16 +1,17 @@
-import { Image, Pressable, ScrollView, Text, View } from "react-native";
+import { Alert, Image, Pressable, ScrollView, Text, View } from "react-native";
 import { styles } from "../styles/styles";
 import { estilo } from "../styles/estilos.ts";
 import { margem } from "../styles/margins";
 import { borda } from "../styles/bordas.ts";
 import React from "react";
-import ParteLogin from "../componentes/ParteLogin.tsx";
+import ParteLogin, { oi, redefinirSenha } from "../componentes/ParteLogin.tsx";
 import { LoginProps } from "../navigation/HomeNavigator.tsx";
 
 const TelaLogin = (props: LoginProps) => {
 
-   function goTelaCadastro(){
-      props.navigation.navigate('TelaCadastro')}
+   function goTelaCadastro() {
+      props.navigation.navigate('TelaCadastro')
+   }
 
    //O retorno da função é o que será construído em tela
    return (
@@ -25,28 +26,28 @@ const TelaLogin = (props: LoginProps) => {
          </View>
 
          <View style={[styles.centralizar, styles.tela]}>
-            <ParteLogin navigation={props.navigation} route={props.route}/>
+            <ParteLogin navigation={props.navigation} route={props.route} />
          </View>
 
          <View style={[styles.centralizar, styles.tela, styles.flexivel_central]}>
-            <Pressable style={(state) => [estilo.botao1, state.pressed &&  estilo.click]}
-            onPress={()=> {goTelaCadastro()}}>
+            <Pressable style={(state) => [estilo.botao1, state.pressed && estilo.click]}
+               onPress={() => { goTelaCadastro() }}>
                <Text style={[estilo.texto_botao1]}>Cadastrar-se</Text>
             </Pressable>
 
-            <Pressable style={(state) => [estilo.botao1, state.pressed &&  estilo.click]}
-               onPress={() => {}}
+            <Pressable style={(state) => [estilo.botao1, state.pressed && estilo.click]}
+               onPress={() => redefinirSenha()}
             >
                <Text style={[estilo.texto_botao1]}>Esqueceu sua senha</Text>
             </Pressable>
-   
+
          </View>
 
          <View>
-         <Pressable style={(state) => [estilo.botao1, state.pressed &&  estilo.click]}
-			onPress={() => {props.navigation.goBack()}}>
-				<Text style={[estilo.texto_botao1]}>Voltar</Text>
-			</Pressable>
+            <Pressable style={(state) => [estilo.botao1, state.pressed && estilo.click]}
+               onPress={() => { props.navigation.goBack() }}>
+               <Text style={[estilo.texto_botao1]}>Voltar</Text>
+            </Pressable>
          </View>
 
       </ScrollView>

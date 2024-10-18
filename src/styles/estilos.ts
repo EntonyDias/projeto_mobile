@@ -22,7 +22,8 @@ const estilo = StyleSheet.create({
       borderRadius: 22,
       borderTopEndRadius: 3,
       borderBottomStartRadius: 3,
-      margin: 18 
+      margin: 18,
+      alignItems: 'center'
    },
    botao2: {
       justifyContent: 'center',
@@ -36,15 +37,30 @@ const estilo = StyleSheet.create({
       borderBottomStartRadius: 3,
       margin: 18,
       opacity: 0.8,
-
+      alignItems: 'center'
    },
+   botaoInvi: {
+      justifyContent: 'center',
+      backgroundColor: '#892EB4',
+      paddingVertical: 8,
+      paddingHorizontal: 8,
+      marginTop: 18,
+      marginBottom: 18,
+      borderRadius: 22,
+      borderTopEndRadius: 3,
+      borderBottomStartRadius: 3,
+      margin: 18,
+      opacity: 0.8,
+      alignItems: 'center'
+   },
+
    texto_botao1: {
       fontSize: 25,
       color: 'black'
    },
 
    caixa_texto1: {
-      color: 'black',
+      color: 'white',
       fontSize: 20,
       borderWidth: 1,
       borderRadius: 4,
@@ -52,8 +68,8 @@ const estilo = StyleSheet.create({
       borderColor: '#FFCCFF'
    },
 
-   click:{
-      opacity: 0.5   
+   click: {
+      opacity: 0.5
    },
 });
 

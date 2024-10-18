@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { ImageBackground, ImageBackgroundComponent, ImageBackgroundBase, ImageBackgroundProps, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
    tela: {
@@ -22,8 +22,13 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'center',
       gap: 8
-   }
+   },
 
+   EnderLiliesBackground1:{
+      
+   }
 });
+
+uri: './images/enderLilie.jpg'
 
 export { styles };

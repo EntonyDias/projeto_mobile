@@ -7,22 +7,22 @@ const App = () => {
     const startPulse = () => {
         scaleValue.setValue(1);
         Animated.timing(scaleValue, {
-            toValue: 1.2,
-            duration: 1000,
+            toValue: 1.8,
+            duration: 1800,
             easing: Easing.ease,
             useNativeDriver: true,
         }).start(() => enderPulse()); // reinicia a animação
     };
 
     const enderPulse = () => {
-      scaleValue.setValue(2);
-      Animated.timing(scaleValue, {
-          toValue: 1.1,
-          duration: 1000,
-          easing: Easing.ease,
-          useNativeDriver: true,
-      }).start(() => startPulse()); // reinicia a animação
-  };
+        scaleValue.setValue(1.8);
+        Animated.timing(scaleValue, {
+            toValue: 1.0,
+            duration: 1800,
+            easing: Easing.ease,
+            useNativeDriver: true,
+        }).start(() => startPulse()); // reinicia a animação
+    };
 
     React.useEffect(() => {
         startPulse();
@@ -31,7 +31,7 @@ const App = () => {
     return (
         <View style={styles.container}>
             <Animated.Text style={[styles.pulseText, { transform: [{ scale: scaleValue }] }]}>
-                Texto Pulsante
+                Texto Pulsant
             </Animated.Text>
         </View>
     );
