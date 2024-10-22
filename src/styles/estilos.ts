@@ -12,6 +12,11 @@ const estilo = StyleSheet.create({
       fontWeight: 'heavy',
       color: '#CC66CC'
    },
+   titulo20: {
+      fontSize: 20,
+      fontWeight: 'heavy',
+      color: '#CC66CC'
+   },
    botao1: {
       justifyContent: 'center',
       backgroundColor: '#892EB4',

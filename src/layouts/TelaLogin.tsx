@@ -4,20 +4,20 @@ import { estilo } from "../styles/estilos.ts";
 import { margem } from "../styles/margins";
 import { borda } from "../styles/bordas.ts";
 import React from "react";
-import ParteLogin, { oi, redefinirSenha } from "../componentes/ParteLogin.tsx";
+import ParteLogin from "../componentes/ParteLogin.tsx";
 import { LoginProps } from "../navigation/HomeNavigator.tsx";
 
 const TelaLogin = (props: LoginProps) => {
 
-   function goTelaCadastro() {
-      props.navigation.navigate('TelaCadastro')
+    function goTelaCadastro() {
+       props.navigation.navigate('TelaCadastro')
    }
 
    //O retorno da função é o que será construído em tela
    return (
       <ScrollView style={[styles.tela]}>
 
-         <View style={[styles.centralizar, margem.margem_bot88]}>
+          <View style={[styles.centralizar, margem.margem_bot88]}>
             <Text style={estilo.titulo40}>Tela Login</Text>
             <Image
                source={require('../images/lulu.png')}
@@ -25,18 +25,20 @@ const TelaLogin = (props: LoginProps) => {
             />
          </View>
 
+         {/*
          <View style={[styles.centralizar, styles.tela]}>
             <ParteLogin navigation={props.navigation} route={props.route} />
-         </View>
+         </View>   */}      
 
-         <View style={[styles.centralizar, styles.tela, styles.flexivel_central]}>
+          <View style={[styles.centralizar, styles.tela, styles.flexivel_central]}>
             <Pressable style={(state) => [estilo.botao1, state.pressed && estilo.click]}
-               onPress={() => { goTelaCadastro() }}>
+               onPress={() => { goTelaCadastro() }}
+               >
                <Text style={[estilo.texto_botao1]}>Cadastrar-se</Text>
             </Pressable>
 
             <Pressable style={(state) => [estilo.botao1, state.pressed && estilo.click]}
-               onPress={() => redefinirSenha()}
+               // onPress={() => redefinirSenha()}
             >
                <Text style={[estilo.texto_botao1]}>Esqueceu sua senha</Text>
             </Pressable>

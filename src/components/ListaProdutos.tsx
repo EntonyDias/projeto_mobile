@@ -22,7 +22,7 @@ const ListaProdutos = (props: ListaProdutosProps) => {
                   {'Nome: ' + info.item.nome}
                </Text>
                <Text>
-                  {'Codigo: ' + info.item.codigo}
+                  {'Codigo: ' + info.item.codigoBar}
                </Text>
                <Text>
                   {'Preço: ' + info.item.preco.toFixed(2)}

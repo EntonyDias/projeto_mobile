@@ -4,7 +4,6 @@ import { InicialProps } from '../navigation/HomeNavigator';
 import { styles } from '../styles/styles';
 import { estilo } from '../styles/estilos';
 import App from '../componentes/Teste';
-import ImageBackgroundComponent from "../images/enderLilie.jpg";
 
 //componente chamado TelaPrincipal que recebe PrincipalProps como parametro
 //e constroi uma view com o componente HelloWorld e Exemplo1 dentro
@@ -16,18 +15,19 @@ const TelaInicial = (props: InicialProps) => {
 
 	}
 
-	function goTelaLogin() {
-		props.navigation.navigate('TelaLogin')
-	}
+	// function goTelaLogin() {
+	// 	props.navigation.navigate('TelaLogin')
+	// }
 
 	return (
 		<>
-		<Image source={require('../images/enderLilie.jpg')}></Image>
+		<Image></Image>
 		<ScrollView style={[styles.tela, { flexDirection: 'column-reverse' }]}>
 			<View
 				style={[]}>
 				<Pressable style={(state) => [estilo.botaoInvi, state.pressed && { opacity: 0.3 }]}
-					onPress={() => { goTelaLogin() }}>
+					// onPress={() => { goTelaLogin() }}
+					>
 					<App />
 				</Pressable>
 

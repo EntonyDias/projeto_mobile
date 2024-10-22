@@ -1,7 +1,8 @@
 type Produto = {
    nome: string;
-   codigo: number;
+   codigoBar: string;
    preco: number;
+   id: string;
 }
 
 export type {Produto}
