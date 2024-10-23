@@ -10,6 +10,7 @@ import TelaPaciente from "../layouts/TelaPaciente.tsx";
 import TelaCadProduto from "../layouts/TelaProduto.tsx";
 import TelaProduto from "../layouts/TelaProduto.tsx";
 import TelaConProduto from "../layouts/TelaConProduto.tsx";
+import TelaAltProduto from "../layouts/TelaAltProduto.tsx";
 
 //Define quais as telas e os parâmetros de cada tela
 type RootStackParamList = {
@@ -22,6 +23,7 @@ type RootStackParamList = {
     TelaPaciente: undefined;
     TelaProduto: undefined;
     TelaConProduto: undefined;
+    TelaAltProduto: undefined;
 };
 
 //Cria a Stack (tipo de navegação onde as telas estão em uma "pilha")
@@ -32,7 +34,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const HomeNavigator = () => {
     return (
         <Stack.Navigator
-            initialRouteName="TelaLogin" //nome da tela inicial (primeira tela quando entra no aplicativo)
+            initialRouteName="TelaConProduto" //nome da tela inicial (primeira tela quando entra no aplicativo)
             screenOptions={{ headerShown: false }} //headerShown define se o cabeçalho aparece ou não
         >
             {/* define uma tela dando um nome(igual ao RootStackParamList) e qual o componente será carregado */}
@@ -46,6 +48,7 @@ const HomeNavigator = () => {
             <Stack.Screen name="TelaPaciente" component={TelaPaciente} />
             <Stack.Screen name="TelaProduto" component={TelaProduto} />
             <Stack.Screen name="TelaConProduto" component={TelaConProduto} />
+            <Stack.Screen name="TelaAltProduto" component={TelaAltProduto} />
         </Stack.Navigator>
     );
 }
@@ -61,9 +64,10 @@ type InicialProps = NativeStackScreenProps<RootStackParamList, 'TelaInicial'>;
 type PacienteProps = NativeStackScreenProps<RootStackParamList, 'TelaPaciente'>;
 type ProdutoProps = NativeStackScreenProps<RootStackParamList, 'TelaProduto'>;
 type ProdutoConProps = NativeStackScreenProps<RootStackParamList, 'TelaConProduto'>;
+type ProdutoAltProps = NativeStackScreenProps<RootStackParamList, 'TelaAltProduto'>;
 
 // exporta o navegador da pilha para ficar visivel para outros arquivos
 export default HomeNavigator;
 
 // // exporta as telas para ficar visiveis para outros arquivos
-export type { PrincipalProps, CadatroProps,  AmaldicoadaProps, MalditaProps, PacienteProps, InicialProps, ProdutoProps, ProdutoConProps, LoginProps};
+export type { PrincipalProps, CadatroProps,  AmaldicoadaProps, MalditaProps, PacienteProps, InicialProps, ProdutoProps, ProdutoConProps, LoginProps, ProdutoAltProps};

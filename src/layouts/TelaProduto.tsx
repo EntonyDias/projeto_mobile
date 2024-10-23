@@ -9,7 +9,7 @@ import CampoTexto from "../componentes/CampoTexto";
 
 const TelaProduto = (props: ProdutoProps) => {
   const [nome, setNome] = useState('');
-  const [codigoBar, setcodigoBar] = useState('');
+  const [codigoBar, setCodigoBar] = useState('');
   const [preco, setPreco] = useState('');
 
 function pegarNome(nome: string){
@@ -82,7 +82,7 @@ function pegarNome(nome: string){
       <TextInput
         maxLength={14}
         style={estilo.caixa_texto1}
-        onChangeText={(text) => { setcodigoBar(text) }} />
+        onChangeText={(text) => { setCodigoBar(text) }} />
 
       <Text style={estilo.titulo30}>Preço</Text>
       <TextInput
@@ -100,31 +100,3 @@ function pegarNome(nome: string){
 }
 
 export default TelaProduto;
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center'
-//   },
-//   caixa_texto: {
-//     width: '70%',
-//     color: 'black',
-//     borderWidth: 1,
-//     borderRadius: 4,
-//     margin: 3
-//   },
-//   botao: {
-//     justifyContent: 'center',
-//     backgroundColor: 'green',
-//     paddingVertical: 10,
-//     paddingHorizontal: 30
-//   },
-//   desc_botao: {
-//     fontSize: 20
-//   },
-//   text_area: {
-//     borderWidth: 1,
-//     borderColor: 'grey'
-//   }
-// });

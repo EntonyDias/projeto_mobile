@@ -6,11 +6,23 @@ import { borda } from "../styles/bordas.ts";
 import React from "react";
 import ParteLogin from "../componentes/ParteLogin.tsx";
 import { LoginProps } from "../navigation/HomeNavigator.tsx";
+import auth from "@react-native-firebase/auth";
 
 const TelaLogin = (props: LoginProps) => {
 
     function goTelaCadastro() {
        props.navigation.navigate('TelaCadastro')
+   }
+   
+   function redefinirSenha() {
+   if (senha == '') {
+      Alert.alert("Senha em branco", "Preencha com uma senha memoravel")
+      return
+   }
+
+   auth().sendPasswordResetEmail(senha).then(()=>
+   Alert.alert("Redefinir senha", "Enviamos um email para você redefinir sua senha"))
+.catch((error) => console.log(error))
    }
 
    //O retorno da função é o que será construído em tela
@@ -25,10 +37,9 @@ const TelaLogin = (props: LoginProps) => {
             />
          </View>
 
-         {/*
          <View style={[styles.centralizar, styles.tela]}>
             <ParteLogin navigation={props.navigation} route={props.route} />
-         </View>   */}      
+         </View>      
 
           <View style={[styles.centralizar, styles.tela, styles.flexivel_central]}>
             <Pressable style={(state) => [estilo.botao1, state.pressed && estilo.click]}

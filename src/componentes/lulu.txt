@@ -1,2 +1,0 @@
-navegação entre 2 ou mais telas
-(botão de avançar pra proxima e retornar a tela)

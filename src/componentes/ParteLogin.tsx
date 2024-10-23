@@ -5,14 +5,12 @@ import { Alert, Pressable, Text } from "react-native";
 import { estilo } from "../styles/estilos.ts";
 import Props, { LoginProps, PrincipalProps } from "../navigation/HomeNavigator.tsx";
 import auth from "@react-native-firebase/auth";
-import TelaLogin from "../layouts/TelaLogin.tsx";
-
-   const [texto, setTexto] = useState('');
-   const [senha, setSenha] = useState('');
+import TelaLogin from "../layouts/TelaLogin.tsx"; 
 
 const ParteLogin = (props: LoginProps) => {
 
-   
+   const [texto, setTexto] = useState('');
+   const [senha, setSenha] = useState('');
 
    function pegarTexto(texto: string) {
       setTexto(texto)
@@ -77,15 +75,4 @@ const ParteLogin = (props: LoginProps) => {
 }
 
 export default ParteLogin;
-export function oi(){
-   Alert.alert("oi","OIE")
-}
-export function redefinirSenha() {
-   if (texto == '') {
-      Alert.alert("Email em branco", "Preencha o email")
-      return
-   }
-auth().sendPasswordResetEmail(texto).then(()=>
-Alert.alert("Redefinir senha", "Enviamos um email para você redefinir sua senha"))
-.catch((error) => console.log(error))
-}
+
